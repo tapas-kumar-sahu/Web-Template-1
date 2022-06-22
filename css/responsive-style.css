@@ -1,0 +1,42 @@
+@media (max-width: 1230px) {
+    /* 3. Banner */
+    .banner_wrapper .banner_header{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:991px) {
+    /* Navbar */
+    .header_wrapper .navbar-toggler:focus{
+        box-shadow: none;
+    }
+    .header_wrapper .nav-item{
+        margin: 0.5rem 0;
+    }
+    .header_wrapper .navbar{
+        background: var(--bg-white);
+    }
+    .header_wrapper .navbar-brand{
+        color: var(--text-black);
+    }
+    .header_wrapper .navbar-brand:hover{
+        color: var(--text-black);
+    }
+    .header_wrapper .navbar .nav-link{
+        color: var(--text-gray);
+    }
+    .header_wrapper .navbar .nav-link:hover{
+        color: var(--text-orange);
+    }
+    .header_wrapper .collapse{
+        background: var(--bg-white);
+        color: var(--text-black);
+    }
+    /* Banner */
+    .banner_wrapper .banner_header{
+        font-size: 2.25rem;
+    }
+    .banner_wrapper .banner_paragraph{
+        font-size: 1rem;
+    }
+}

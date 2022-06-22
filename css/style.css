@@ -1,0 +1,383 @@
+/* TABLE OF CONTENTS */
+/* --------------------
+1. General
+2. Navbar
+3. Banner
+4. About
+5. Services
+6. Portfolio
+7. Contact
+8. Footer
+-------------------- */
+
+/* 1. General */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&display=swap');
+/* font-family: 'Merriweather Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+/* font-family: 'Merriweather', serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+:root{
+    /* Background Color */
+    --bg-orange: #DD4124;
+    --bg-black:#212529;
+    --bg-white: #FFFFFF;
+    /* Text Color */
+    --text-orange: #DD4124;
+    --text-black: #212529;
+    --text-white: #FFFFFF;
+    --text-gray: #6c757d;
+    /* Fonts */
+    --primary-font: 'Merriweather Sans', sans-serif;
+    --secondary-font: 'Merriweather', serif;
+}
+h1, h2, h3, a{
+    font-family: var(--primary-font);
+    font-weight: 500;
+}
+p{
+    font-family: var(--secondary-font);
+    font-weight: 400;
+}
+.divider{
+    height: 0.2rem;
+    max-width: 3.25rem;
+    margin: 1.5rem auto;
+    opacity: 1;
+    border: none;
+}
+body{
+    background-color: var(--bg-white);
+    font-family: var(--primary-font);
+}
+
+/* Custom CSS */
+/* btns */
+.btn-orange{
+    display: inline-block;
+    background-color: var(--bg-orange);
+    color: var(--text-white);
+    padding: 1.25rem 2.25rem;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 10rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+.btn-white{
+    display: inline-block;
+    background-color: var(--bg-white);
+    color: var(--text-black);
+    padding: 1.25rem 2.25rem;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 10rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+/* 2. Navbar */
+.header_wrapper .navbar-brand{
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+}
+.header_wrapper .navbar-brand:hover{
+    color: var(--text-white);
+}
+.header_wrapper .nav-item{
+    margin: 0 10px;
+}
+.header_wrapper .nav-item .nav-link{
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1;
+}
+.header_wrapper .nav-item .nav-link:hover{
+    color: var(--text-white);
+}
+.header_wrapper .nav-item .nav-link.active{
+    color: var(--text-orange);
+}
+.header-scrolled{
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.5rem;
+    background: var(--bg-white);
+    --webkit-box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+}
+.header-scrolled .navbar-brand{
+    color: var(--text-black);
+}
+.header-scrolled .navbar-brand:hover{
+    color: var(--text-orange);
+}
+.header-scrolled .nav-item .nav-link{
+    color: var(--text-black);
+}
+.header-scrolled .nav-item .nav-link:hover{
+    color: var(--text-orange);
+}
+/* 3. Banner */
+.banner_wrapper{
+    height: 100vh;
+    min-height: 40rem;
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('../images/bg-banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+}
+.banner_wrapper .banner_header{
+    color: var(--text-white);
+    font-size: 3.5rem;
+}
+.banner_wrapper .banner_paragraph{
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.75) !important;;
+}
+.banner_wrapper .divider{
+    background-color: var(--bg-orange);
+}
+.banner_wrapper .btn-orange:hover{
+    color: var(--text-white);
+}
+
+/* 4. About */
+.about_wrapper {
+    padding: 6.25rem 0;
+    background: var(--bg-orange);
+}
+.about_wrapper .btn-white:hover{
+    color: var(--text-black);
+}
+.about_wrapper .divider{
+    background-color: var(--bg-white);
+}
+.about_wrapper .about_paragraph{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75) !important;;
+}
+
+/* 5. Services */
+.services_wrapper{
+    padding: 6.25rem 0;
+}
+.services_wrapper .title{
+    color: var(--text-black);
+}
+.services_wrapper .divider{
+    background-color: var(--bg-orange);
+}
+.services_wrapper .content-heading{
+    color: var(--text-black);
+}
+.services_wrapper .content_paragraph{
+    color: var(--text-gray);
+}
+.services_wrapper i{
+    font-size: 2.5rem;
+    color: var(--text-orange);
+}
+
+/* 6. Portfolio */
+/* .portfolio_wrapper{
+    padding: 80px 0;
+} */
+.portfolio_box{
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio_box .portfolio-box-caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-orange);
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    line-height: 1.2;
+}
+.portfolio_box .portfolio-box-caption .project-category{
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.portfolio_box .portfolio-box-caption .project-name{
+    font-size: 1.5rem;
+    font-family: var(--secondary-font);
+    color: var(--text-white);
+}
+.portfolio_box:hover.portfolio_box .portfolio-box-caption{
+    display: flex;
+}
+.portfolio_wrapper .portfolio_content{
+    padding: 6.25rem 0;
+    background: var(--bg-black);
+}
+.portfolio_wrapper .portfolio_content h2{
+    color: var(--text-white);
+}
+.portfolio_wrapper .portfolio_content .btn-white:hover{
+    color: var(--text-black);
+}
+
+/* 7. Contact */
+.contact_wrapper{
+    padding: 6.25rem 0;
+}
+.contact_wrapper .divider{
+    background: var(--bg-orange);
+}
+.contact_wrapper ::placeholder{
+    font-family: var(--secondary-font);
+}
+.contact_wrapper input{
+    font-family: var(--secondary-font);
+}
+.contact_wrapper label{
+    font-family: var(--secondary-font);
+}
+.contact_wrapper .form-control{
+    color: var(--text-light);
+}
+.contact_wrapper .form-control:focus{
+    box-shadow: none;
+    outline: none;
+    border-color: var(--bg-orange);
+}
+.contact_wrapper .btn-orange{
+    font-family: var(--primary-font);
+}
+.contact_wrapper i{
+    color: var(--text-gray);
+}
+/* 8. Footer */
+.footer p{
+    color: var(--text-gray);
+    margin-bottom: 0;
+}
+
+/* Color Theme Option */
+.appearance{
+    position: absolute;
+    top: 12%;
+    right: 0.5%;
+    z-index: 100;
+}
+.appearance .icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:2.7rem;
+    width:3.5rem;
+    border-radius: .375rem;
+    line-height: 3rem;
+    color: var(--text-white);
+    background-color: var(--bg-orange);
+    cursor: pointer;
+    opacity: 0.7;
+}
+.appearance .icons:hover{
+    opacity: 1;
+}
+.appearance .color-icon{
+    position: relative;
+}
+.appearance .color-icon .color-box{
+    position: absolute;
+    min-height: 6.25rem;
+    background-color: var(--bg-white);
+    top: 3rem;
+    right: 0;
+    padding: 1rem 1.25rem 1.25rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.375rem;
+    opacity: 0;
+    pointer-events: none;
+}
+.color-icon.open .color-box{
+    opacity: 1;
+    pointer-events: auto;
+}
+.color-icon.open{
+    transition: all 3s ease;
+}
+.color-icon.open .arrow{
+    transform: rotate(-180deg);
+}
+.color-icon .color-box span{
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: var(--text-orange);
+}
+.color-box .color-switchers{
+    display: flex;
+}
+.color-box .color-switchers .btn{
+    display: inline-block;
+    background-color: var(--bg-orange);
+    height: 1.5rem;
+    width: 1.5rem;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.color-switchers .btn.active{
+    box-shadow: 0 0 0 2px #FFFFFF,
+                0 0 0 4px var(--bg-orange)
+}
+.color-switchers .btn.orange{
+    background: #DD4124;
+}
+.color-switchers .btn.orange.active{
+    box-shadow: 0 0 0 2px #FFFFFF,
+                0 0 0 4px var(--bg-orange);
+}
+.color-switchers .btn.blue{
+    background: #6353f0;
+}
+.color-switchers .btn.blue.active{
+    box-shadow: 0 0 0 2px #FFFFFF,
+                0 0 0 4px #6353f0;
+}
+.color-switchers .btn.purple{
+    background: #B565A7;
+}
+.color-switchers .btn.purple.active{
+    box-shadow: 0 0 0 2px #FFFFFF,
+                0 0 0 4px #B565A7;
+}
+.color-switchers .btn.green{
+    background: #88B04B;
+}
+.color-switchers .btn.green.active{
+    box-shadow: 0 0 0 2px #FFFFFF,
+                0 0 0 4px #88B04B;
+}
